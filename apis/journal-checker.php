@@ -1908,8 +1908,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         .chatbot-header {
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
-            padding: 20px;
+            padding: 10px 20px;
             font-weight: 600;
+            font-size: 1.27rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
