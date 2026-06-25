@@ -2771,11 +2771,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
                     </div>
                     <div class="footer-support">Developed by Rochmady & Wizdam Team. | Contact: rochmady at sangia.org | Data powered by Scopus API</div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://twitter.com/SangiaNews?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/sangiapublishing" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/68901582" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@rochmady" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/channel/UCAx2FDkLH77Phh5zRSIVRfw" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
