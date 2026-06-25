@@ -883,11 +883,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scopus Journal Metrics Checker | Wizdam</title>
+    <title>Scopus Journal Metrics Checker | Lumera</title>
     <meta name="description" content="An API and visual platform to check Scopus-indexed journal metrics by ISSN. Provides real-time CiteScore, Quartile, SJR, and SNIP data for research and integration." />
     <meta name="owner" content="PT. Sangia Research Media and Publishing" />
-    <meta name="design" content="Rochmady and Wizdam AI Team" />
-    <meta name="generator" content="Wizdam AI v1.8.0" />
+    <meta name="design" content="Rochmady, CodeLumera and AI Team" />
+    <meta name="generator" content="Lumera AI v1.8.0" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
