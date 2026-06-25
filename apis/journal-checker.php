@@ -1920,7 +1920,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
             background: none;
             border: none;
             color: white;
-            font-size: 1.2em;
+            font-size: 1em;
             cursor: pointer;
             padding: 5px;
             width: 40px;
