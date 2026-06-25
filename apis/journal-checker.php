@@ -2000,13 +2000,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         .back-to-top {
             position: fixed;
             bottom: 110px;
-            right: 35px;
-            width: 50px;
-            height: 50px;
+            right: 40px;
+            width: 40px;
+            height: 40px;
             background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
             color: white;
             border: none;
-            border-radius: 50%;
+            border-radius: 7px;
             cursor: pointer;
             font-size: 1.2em;
             opacity: 0;
