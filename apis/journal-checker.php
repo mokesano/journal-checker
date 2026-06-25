@@ -2815,7 +2815,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
             
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <div class="copyright-title">© 2025 Wizdam by PT. Sangia Research Media and Publishing. All rights reserved.</div>
+                    <div class="copyright-title">© 2025 Lumera by PT. Sangia Research Media and Publishing. All rights reserved.</div>
                 </div>
                 <ul class="footer-bottom-links">
                     <li><a href="#">Terms of Service</a></li>
