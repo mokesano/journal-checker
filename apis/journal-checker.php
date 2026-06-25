@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 
 /**
  * Scopus Journal Metrics Checker - Enhanced Version
@@ -936,7 +935,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         }
         
         .navbar-container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -1031,7 +1030,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
            MAIN CONTAINER
            ================================================================== */
         .container {
-            max-width: 1000px;
+            max-width: 1280px;
             margin: 70px auto;
             /*background: white;*/
             border-radius: var(--radius);
@@ -2032,7 +2031,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         }
         
         .footer-container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 20px;
         }
