@@ -1896,8 +1896,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
             position: absolute;
             bottom: 80px;
             right: 0;
-            width: 350px;
-            height: 450px;
+            width: 400px;
+            height: 600px;
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
