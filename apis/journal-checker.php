@@ -1873,8 +1873,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         }
         
         .chatbot-toggle {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             border: none;
             border-radius: 50%;
