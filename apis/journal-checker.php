@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /**
  * Scopus Journal Metrics Checker - Enhanced Version
@@ -935,7 +936,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         }
         
         .navbar-container {
-            max-width: 1180px;
+            max-width: 1280px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -2031,7 +2032,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         }
         
         .footer-container {
-            max-width: 1180px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -2459,7 +2460,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
                         <?php if ($result['citescore']): ?>
                         <div class="metric-card citescore">
                             <div class="metric-label">CiteScore</div>
-                            <div class="metric-value"><?php echo number_format($result['citescore'], 2); ?></div>
+                            <div class="metric-value"><?php echo number_format((float) $result['citescore'], 2); ?></div>
                             <div class="metric-description">
                                 Rata-rata sitasi per dokumen dalam 3 tahun terakhir
                                 <?php if ($result['citescore_year']): ?>
@@ -2478,7 +2479,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
                             <div class="metric-description">
                                 <?php if ($result['percentile']): ?>
                                 <div class="percentile">
-                                        <strong>Percentile: <?php echo number_format($result['percentile'], 1); ?>%</strong>
+                                        <strong>Percentile: <?php echo number_format((float) $result['percentile'], 1); ?>%</strong>
                                 </div>
                                 <?php endif; ?>
                                 <div class="rank quartile_year">
