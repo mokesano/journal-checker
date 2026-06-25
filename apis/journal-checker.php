@@ -1923,6 +1923,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
             font-size: 1.2em;
             cursor: pointer;
             padding: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .chatbot-close:hover { 
+            background: rgba(255,255,255,0.2); 
         }
         
         .chatbot-messages {
