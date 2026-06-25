@@ -1867,8 +1867,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
            ================================================================== */
         .chatbot {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 40px;
+            right: 35px;
             z-index: 1000;
         }
         
@@ -1894,7 +1894,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         .chatbot-window {
             display: none;
             position: absolute;
-            bottom: 80px;
+            bottom: 60px;
             right: 0;
             width: 400px;
             height: 600px;
