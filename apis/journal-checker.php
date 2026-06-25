@@ -1926,7 +1926,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
         }
         
         .chatbot-messages {
-            height: 320px;
+            height: 470px;
             padding: 20px;
             overflow-y: auto;
             background: #f8f9fa;
