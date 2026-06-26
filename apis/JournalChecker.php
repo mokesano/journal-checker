@@ -2,6 +2,8 @@
 declare(strict_types=1);
 
 /**
+ * @file apis/JournalChecker.php
+ * 
  * Scopus Journal Metrics Checker - Enhanced Version
  * 
  * Fitur: CiteScore, Quartile, SJR, SNIP, Subject Areas, Discontinued Status

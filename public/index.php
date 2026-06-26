@@ -22,8 +22,8 @@ declare(strict_types=1);
 ini_set('error_log', dirname(__DIR__) . '/error_log');
 
 // dirname(__DIR__) = satu level di atas folder public/
-// Hasilnya: /home/user/public_html/scopus/apis/journal-checker.php
-$targetFile = dirname(__DIR__) . '/apis/journal-checker.php';
+// Hasilnya: /home/user/public_html/scopus/apis/JournalChecker.php
+$targetFile = dirname(__DIR__) . '/apis/JournalChecker.php';
 
 if (file_exists($targetFile)) {
     require $targetFile;
