@@ -31,9 +31,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    # Install Guardian CLI
+    - name: Install Guardian
+      run: npm install -g @infosec-agent/guardian
+      shell: cmd
+
     # Run Guardian CLI directly and produce a SARIF result file.
     - name: Run OSSAR (guardian)
-      # Use cmd shell because guardian on windows appears as guardian.cmd in runners
       run: |
         echo Running Guardian with semgrep and trivy...
         REM Ensure at least one tool is passed; guardian will error without --tool or --config
