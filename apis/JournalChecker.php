@@ -9,6 +9,8 @@ declare(strict_types=1);
  * interface is rendered from views/journal-checker.php.
  */
 
+use JournalChecker\DatabaseConnection;
+use JournalChecker\JournalRepository;
 use JournalChecker\ScopusApi;
 
 $autoload = dirname(__DIR__) . '/vendor/autoload.php';
@@ -17,6 +19,8 @@ if (file_exists($autoload)) {
     require $autoload;
 } else {
     require_once __DIR__ . '/ScopusApi.php';
+    require_once __DIR__ . '/DatabaseConnection.php';
+    require_once __DIR__ . '/JournalRepository.php';
 }
 
 const SCOPUS_API_KEY = '2b2a63a2cd69bd0cfd7acc07addc140f';
@@ -143,6 +147,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['issn'])) {
             if (!$result['success']) {
                 $error = $result['error'];
                 $result = null;
+            } else {
+                $pdo = DatabaseConnection::createFromEnvironment(dirname(__DIR__));
+                $result['database_saved'] = false;
+
+                if ($pdo) {
+                    $repository = new JournalRepository($pdo);
+                    $result['database_saved'] = $repository->upsertScopusResult($result);
+                }
             }
         } catch (Throwable $exception) {
             $error = 'System Error: ' . $exception->getMessage();
