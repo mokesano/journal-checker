@@ -5,12 +5,8 @@ declare(strict_types=1);
  * Entry point – https://scopus.sangia.org
  * Letak file: /home/user/public_html/scopus/public/index.php
  *
- * Tugasnya SATU: teruskan SEMUA request ke journal-checker.php
- * yang berada satu level di atasnya (di luar public/).
- *
- * APIs: journal-checker.php sudah cerdas:
- *   - Jika ada ?proxy_action= → balas JSON (mode proxy)
- *   - Jika tidak → tampilkan halaman HTML
+ * Tugasnya SATU: teruskan SEMUA request ke controller JournalChecker.
+ * Controller menangani request API/form dan merender interface dari file view terpisah.
  */
 
 // Aktifkan saat debugging, nonaktifkan di production:
