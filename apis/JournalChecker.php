@@ -16,7 +16,7 @@ $autoload = dirname(__DIR__) . '/vendor/autoload.php';
 if (file_exists($autoload)) {
     require $autoload;
 } else {
-    require_once dirname(__DIR__) . '/src/ScopusApi.php';
+    require_once __DIR__ . '/ScopusApi.php';
 }
 
 const SCOPUS_API_KEY = '2b2a63a2cd69bd0cfd7acc07addc140f';
