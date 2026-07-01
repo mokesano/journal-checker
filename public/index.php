@@ -11,7 +11,8 @@ declare(strict_types=1);
  * @class Index
  * @ingroup apis
  *
- * @brief Handle requests for database connections.
+ * @brief System Entry Point.
+ * 
  * Entry point – https://scopus.sangia.org
  * Letak file: /home/user/public_html/scopus/public/index.php
  *
