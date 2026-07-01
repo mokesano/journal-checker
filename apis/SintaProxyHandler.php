@@ -2,8 +2,16 @@
 declare(strict_types=1);
 
 /**
- * @file SintaProxyHandler.php
- * @brief Script untuk mengakses Sinta Impact dengan caching (Versi Final)
+ * @file apis/SintaProxyHandler.php
+ *
+ * Copyright (c) 2024-2026 Sangia Lumera Publishing
+ * Copyright (c) 2017-2026 Rochmady and Code Lumera Teams
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class SintaProxyHandler
+ * @ingroup apis
+ *
+ * @brief Handle requests for Sinta API integration.
  */
 
 // -----------------------------------------------------------------
