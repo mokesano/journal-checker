@@ -34,23 +34,30 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Ensure a compatible version of dotnet is installed.
-    # The [Microsoft Security Code Analysis CLI](https://aka.ms/mscadocs) is built with dotnet v3.1.201.
-    # A version greater than or equal to v3.1.201 of dotnet must be installed on the agent in order to run this action.
-    # GitHub hosted runners already have a compatible version of dotnet installed and this step may be skipped.
-    # For self-hosted runners, ensure dotnet version 3.1.201 or later is installed by including this action:
-    # - name: Install .NET
-    #   uses: actions/setup-dotnet@v4
-    #   with:
-    #     dotnet-version: '3.1.x'
+    # Detect whether repo contains package.json; set output 'skip' accordingly.
+    - name: Detect package.json
+      id: detect_manifest
+      shell: pwsh
+      run: |
+        if (Test-Path 'package.json') {
+          echo "skip=false" >> $env:GITHUB_OUTPUT
+        } else {
+          echo "skip=true" >> $env:GITHUB_OUTPUT
+        }
 
-      # Run open source static analysis tools
+    # Only run OSSAR when a manifest exists (here: package.json).
     - name: Run OSSAR
+      if: ${{ steps.detect_manifest.outputs.skip == 'false' }}
       uses: github/ossar-action@v1
       id: ossar
+      with:
+        # Provide at least one tool or config to avoid "No applicable tools were detected" error.
+        # Replace '--tool npm-audit' with a tool appropriate for your project if not Node.js.
+        args: '--tool npm-audit'
 
-      # Upload results to the Security tab
+    # Upload results to the Security tab only when OSSAR actually ran.
     - name: Upload OSSAR results
+      if: ${{ steps.detect_manifest.outputs.skip == 'false' }}
       uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: ${{ steps.ossar.outputs.sarifFile }}
